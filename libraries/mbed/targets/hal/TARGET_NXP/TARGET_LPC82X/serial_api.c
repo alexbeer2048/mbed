@@ -293,7 +293,7 @@ void serial_irq_set(serial_t *obj, SerialIrq irq, uint32_t enable)
 int serial_getc(serial_t *obj)
 {
     while (!serial_readable(obj));
-    return obj->uart->RXDAT;
+    return obj->uart->RXDATSTAT;
 }
 
 void serial_putc(serial_t *obj, int c)
